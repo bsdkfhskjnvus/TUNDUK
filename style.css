@@ -1,40 +1,23 @@
 body{background-color: #fff  ; font-family: 'Lexend Deca', sans-serif; }
 /* Настройки для мобильных устройств (экраны меньше 600px) */
-/* Базовые исправления для блоков */
-.name, .canvas {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
 @media (max-width: 600px) {
-  .canvas {
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    transform: scale(0.7); /* Уменьшаем только само лого */
-    transform-origin: center;
-  }
-}
-/* Адаптация для мобилок */
-@media (max-width: 600px) {
-  .logo-wrapper {
-    /* Рассчитываем масштаб: если экран 360px, а лого 500px, 
-       scale(0.7) визуально сожмет его без переделки линий */
-    transform: scale(0.65); 
-    transform-origin: center top; /* Сжимаем относительно центра верха */
-    margin-bottom: -80px; /* Убираем лишнее пустое пространство, которое остается после scale */
+  .conteiner {
+    /* Уменьшаем масштаб всего содержимого, чтобы влезло в экран */
+    zoom: 0.7; 
+    /* Или используем трансформацию, если zoom не сработает */
+    transform: scale(0.8);
+    transform-origin: top center;
   }
 
   .subtitle {
-    font-size: 20px !important; /* Уменьшаем текст подзаголовка */
-    width: 90% !important;      /* Чтобы не вылезал за края */
-    margin-top: 0;
+    width: 90%;      /* На мобилке делаем ширину по экрану */
+    font-size: 24px;  /* Уменьшаем шрифт, чтобы текст не переносился криво */
+    height: auto;     /* Высота подстроится под текст */
   }
   
-  .conteiner {
-    overflow-x: hidden; /* Защита от появления горизонтальной полосы прокрутки */
-    padding-top: 20px;
+  .canvas, .name {
+    /* Убираем лишние отступы, чтобы элементы не наезжали друг на друга */
+    margin-top: 20px; 
   }
 }
 
@@ -310,4 +293,3 @@ body{background-color: #fff  ; font-family: 'Lexend Deca', sans-serif; }
   margin: 20px auto; 
   padding: 0 10px; /* Отступы по бокам */
 }
-
