@@ -21,18 +21,12 @@ body{background-color: #fff  ; font-family: 'Lexend Deca', sans-serif; }
   }
 }
 
-.subtitle {
-  font-weight: bold;
-  font-size: 34px;
-  width: 542px;
-  max-width: 100%; /* Добавь это: не даст блоку стать шире экрана */
-  min-height: 46px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 20px auto; 
-  padding: 0 10px; /* Отступы по бокам */
+.conteiner {
+  display: flex;          /* Включаем гибкую разметку */
+  flex-direction: column; /* Элементы будут идти друг под другом (в колонку) */
+  align-items: center;     /* Центрирование по горизонтали */
+  min-height: 100vh;      /* Контейнер растягивается на всю высоту экрана */
+  text-align: center;     /* Центрирует текст внутри элементов */
 }
 
 /* Дополнительно для картинок, чтобы они не вылезали за края */
@@ -287,21 +281,15 @@ body{background-color: #fff  ; font-family: 'Lexend Deca', sans-serif; }
   left: 495px;
 }
 .subtitle {
-  /* 1. Настройки шрифта из 3-го скриншота */
-  /* Не забудь подключить шрифт в HTML! */
-  font-weight: bold;       /* Bold */
-  font-size: 34px;         /* Число 34 из макета */
-  
-  /* 2. Размеры блока из 1-го скриншота */
-  width: 542px;            /* W 542 */
-  height: 46px;            /* H 46 */
-  
-  /* 3. Центрирование и активация размеров */
-  display: flex;           /* Без этого width/height могут не работать */
-  align-items: center;     /* Центр по вертикали */
-  justify-content: center; /* Центр по горизонтали */
+  font-weight: bold;
+  font-size: 34px;
+  width: 542px;
+  max-width: 100%; /* Добавь это: не даст блоку стать шире экрана */
+  min-height: 46px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  
-  /* 4. Центрирование самого блока на странице */
-  margin: 0 auto; 
+  margin: 20px auto; 
+  padding: 0 10px; /* Отступы по бокам */
 }
